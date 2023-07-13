@@ -67,7 +67,7 @@ public class Robot extends TimedRobot {
 
         // Enable local logging.
         // ** CAREFUL: this probably should be disabled during competition.
-        DataLogManager.start();
+        // DataLogManager.start();
         
         // Instantiate our RobotContainer.  This will perform all our button bindings.
         m_robotContainer = new RobotContainer();
@@ -135,7 +135,7 @@ public class Robot extends TimedRobot {
         m_robotContainer.getDriveTrain().syncSwerveAngleEncoders();
 
         // Make sure the Arm Sooulder and Reacher won't move again when we re-enable.
-        m_robotContainer.getArm().resetGoal();
+        // m_robotContainer.getArm().resetGoal();
 
         // auto trajectory plotter
         AutoCommandInterface autoCommandInterface = m_chosenTrajectory.getSelected();
@@ -185,10 +185,10 @@ public class Robot extends TimedRobot {
 
         // for safety, some autos need to raise the arm 
         //  because it can fall while disabled
-        m_robotContainer.getArm().raiseArmAfterAuto();
+        // m_robotContainer.getArm().raiseArmAfterAuto();
 
-        m_robotContainer.getDriveCommand().schedule();
-        m_robotContainer.getDriveTrain().resetDrivingModes();
+        // m_robotContainer.getDriveCommand().schedule();
+        // m_robotContainer.getDriveTrain().resetDrivingModes();
         
         // m_robotContainer.getClaw().enableCompressor();
     }

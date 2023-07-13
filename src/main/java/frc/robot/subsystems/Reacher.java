@@ -144,6 +144,7 @@ public class Reacher extends TrapezoidProfileSubsystem {
             setPoint.position = m_encoder.getPosition();
             m_resetReacherPos = false;
         }
+        // TODO: try commenting this out to make reacher never moves?
         m_PIDController.setReference(setPoint.position, ControlType.kPosition, 0); // , feedforward / 12.0);
         SmartDashboard.putNumber("Reacher/setPoint", Units.metersToInches(setPoint.position));
     }

@@ -40,7 +40,7 @@ public class Arm extends SubsystemBase {
 
     // rotates the arm to a certain angle in radians
     public void setArmAngle(double radian) {
-        m_shoulder.setAngle(radian);
+        // m_shoulder.setAngle(radian);
     }
 
     // returns the currrent length of the arm in meters
@@ -50,7 +50,8 @@ public class Arm extends SubsystemBase {
 
     // returns the current angle of the arm in radians
     public double getArmAngle() {
-        return m_shoulder.getAngle();
+        // return m_shoulder.getAngle();
+        return 0.0;
     }
     
     public void resetGoal(){
@@ -59,7 +60,7 @@ public class Arm extends SubsystemBase {
     }
 
     public void resetShoulderPos(){
-        m_shoulder.resetShoulderPos();
+        // m_shoulder.resetShoulderPos();
     }
 
     public void resetReacherPos(){
