@@ -10,14 +10,15 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.commands.ScoreArm;
 
 public class Arm extends SubsystemBase {
-    private Shoulder m_shoulder;
+    private ShoulderNormal m_shoulder;
     private Reacher m_reacher;
-    private DutyCycleEncoder m_Duty_Encoder = new DutyCycleEncoder(0);
+    // private DutyCycleEncoder m_Duty_Encoder = new DutyCycleEncoder(0);
     private boolean m_raiseArmAfterAuto = false;
 
     public Arm() {
         // Construct the shoulder and reacher trapezoid subsystems
-        m_shoulder = new Shoulder(m_Duty_Encoder);
+        // m_shoulder = new Shoulder(m_Duty_Encoder);
+        m_shoulder = new ShoulderNormal();
         m_reacher = new Reacher();
     
         // SD variables for the manual setting commands
@@ -53,7 +54,7 @@ public class Arm extends SubsystemBase {
     }
     
     public void resetGoal(){
-        m_shoulder.resetGoal();
+        // m_shoulder.resetGoal();
         m_reacher.resetGoal();
     }
 
