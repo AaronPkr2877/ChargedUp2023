@@ -48,7 +48,7 @@ public class RollerClaw extends Claw {
         m_motor.setIdleMode(IdleMode.kBrake);
         
         m_timer = new Timer();
-        SmartDashboard.putBoolean("claw/isCompressorEnabled", true);
+        SmartDashboard.putBoolean("claw/isCompressorEnabled", false);
         // SmartDashboard.putNumber("claw/speed", 0.0);
         m_speed = 0.0;
     }
